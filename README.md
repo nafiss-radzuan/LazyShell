@@ -1,5 +1,21 @@
 # LazyShell
-It help user to generate reverse shell using this script
+It help user to generate reverse shell using this script.
+This script include variety of reverse shell command:
+- bash
+- perl
+- ruby
+- golang
+- netcat
+- ncat
+- powershell
+- awk
+- lua
+- java
+- socat
+- nodejs
+- telnet
+- python
+
 
 # Installation
 ```
