@@ -60,7 +60,7 @@ for k,v in shell_dict.items():
 parser = argparse.ArgumentParser(prog='LazyShell.py', usage='%(prog)s [interface] [Port] [Type]')
 parser.add_argument(type=str, help="[Interface]", dest='interface')
 parser.add_argument(type=int, help="[Port number]", dest='portnum')
-parser.add_argument(type=str, help="[Revers shell type]", dest='type')
+parser.add_argument(type=str, help="[Reverse shell type]", dest='type')
 
 # got this from here https://stackoverflow.com/a/47440202
 args = parser.parse_args(args=None if sys.argv[1:] else ['--help'])
