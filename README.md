@@ -1,5 +1,5 @@
 # LazyShell
-Script to generate reverse shells
+It help user to generate reverse shell using this script
 
 # Installation
 ```
