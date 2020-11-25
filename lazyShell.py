@@ -65,9 +65,10 @@ parser.add_argument(type=str, help="[Revers shell type]", dest='type')
 # got this from here https://stackoverflow.com/a/47440202
 args = parser.parse_args(args=None if sys.argv[1:] else ['--help'])
 
+# Get the IP Address and Port
 if args.interface or args.portnum:
-    try:
-        ip = ni.ifaddresses(args.interface)[ni.AF_INET][0]['addr']
+    try:            
+        ip = ni.ifaddresses(args.interface)[ni.AF_INET][0]['addr']  
         port = args.portnum
     except ValueError:
         print('\n\n\033[1m'+'\033[91m' + "[!] "+'\033[0m' + " Please enter a valid interface name")
@@ -78,7 +79,7 @@ if args.type:
     for k,v in shell_dict.items():
         for i in v:
             if k == args.type:
-                x = base64.b64decode(i).decode('utf-8')
+                x = base64.b64decode(i).decode('utf-8') # get input 0 = IP and 1 = port 
                 print('=> '+'\033[1m'+ x.format(ip, port)+'\033[0m')
 
 print('\n\033[1m'+'\033[92m'+"[*] "+'\033[0m' +"Starting the listener on "+str(ip)+":"+str(port)+"...")
